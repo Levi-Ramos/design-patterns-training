@@ -10,10 +10,7 @@ uses
   Characters in 'Characters.pas';
 
 var
-	Queen: TQueen;
-  King: TKing;
-  Troll: TTroll;
-  Knight: TKnight;
+	Queen, King, Troll, Knight: TCharacter;
 begin
   try
     { TODO -oUser -cConsole Main : Insert code here }

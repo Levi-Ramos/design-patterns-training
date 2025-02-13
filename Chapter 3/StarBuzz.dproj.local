@@ -1,11 +1,11 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <BorlandProject>
-  <Transactions>
-    <Transaction>2025/02/11 08:45:52.665,=C:\Users\RD-00007\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
-    <Transaction>2025/02/11 08:51:11.667,C:\Users\RD-00007\Documents\Embarcadero\Studio\Projects\Beverages.pas=C:\Users\RD-00007\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
-    <Transaction>2025/02/11 08:52:15.121,=C:\Users\RD-00007\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
-    <Transaction>2025/02/11 09:03:01.152,C:\Users\RD-00007\Documents\Embarcadero\Studio\Projects\Design Patterns'\Chapter 3\Decorator.pas=C:\Users\RD-00007\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
-    <Transaction>2025/02/11 09:03:09.554,C:\Users\RD-00007\Documents\Embarcadero\Studio\Projects\Design Patterns'\Chapter 3\Beverages.pas=C:\Users\RD-00007\Documents\Embarcadero\Studio\Projects\Beverages.pas</Transaction>
-    <Transaction>2025/02/11 09:03:21.581,C:\Users\RD-00007\Documents\Embarcadero\Studio\Projects\Design Patterns'\Chapter 3\StarBuzz.dproj=C:\Users\RD-00007\Documents\Embarcadero\Studio\Projects\Project4.dproj</Transaction>
+	<Transactions>
+    <Transaction>2025/02/11 08:45:52.000.665,=C:\Users\RD-00007\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2025/02/11 08:51:11.000.667,C:\Users\RD-00007\Documents\Embarcadero\Studio\Projects\Beverages.pas=C:\Users\RD-00007\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2025/02/11 08:52:15.000.121,=C:\Users\RD-00007\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2025/02/11 09:03:01.000.152,C:\Users\RD-00007\Documents\Embarcadero\Studio\Projects\Design Patterns'\Chapter 3\Decorator.pas=C:\Users\RD-00007\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2025/02/11 09:03:09.000.554,C:\Users\RD-00007\Documents\Embarcadero\Studio\Projects\Design Patterns'\Chapter 3\Beverages.pas=C:\Users\RD-00007\Documents\Embarcadero\Studio\Projects\Beverages.pas</Transaction>
+    <Transaction>2025/02/11 09:03:21.000.581,C:\Users\RD-00007\Documents\Embarcadero\Studio\Projects\Design Patterns'\Chapter 3\StarBuzz.dproj=C:\Users\RD-00007\Documents\Embarcadero\Studio\Projects\Project4.dproj</Transaction>
   </Transactions>
 </BorlandProject>

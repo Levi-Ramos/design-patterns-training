@@ -1,12 +1,12 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <BorlandProject>
-  <Transactions>
-    <Transaction>2025/02/10 14:23:17.909,=C:\Users\RD-00007\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
-    <Transaction>2025/02/10 14:24:57.337,C:\Users\RD-00007\Documents\Embarcadero\Studio\Projects\WeaponBehavior.pas=C:\Users\RD-00007\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
-    <Transaction>2025/02/10 14:30:55.360,=C:\Users\RD-00007\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
-    <Transaction>2025/02/10 14:31:02.659,C:\Users\RD-00007\Documents\Embarcadero\Studio\Projects\Characters.pas=C:\Users\RD-00007\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
-    <Transaction>2025/02/10 14:41:05.750,C:\Users\RD-00007\Documents\Embarcadero\Studio\Projects\Design Patterns'\Chatper  1\KingAndQueen.dproj=C:\Users\RD-00007\Documents\Embarcadero\Studio\Projects\Project4.dproj</Transaction>
-    <Transaction>2025/02/10 14:41:18.598,C:\Users\RD-00007\Documents\Embarcadero\Studio\Projects\Design Patterns'\Chatper  1\Characters.pas=C:\Users\RD-00007\Documents\Embarcadero\Studio\Projects\Characters.pas</Transaction>
-    <Transaction>2025/02/10 14:41:27.975,C:\Users\RD-00007\Documents\Embarcadero\Studio\Projects\Design Patterns'\Chatper  1\WeaponBehavior.pas=C:\Users\RD-00007\Documents\Embarcadero\Studio\Projects\WeaponBehavior.pas</Transaction>
+	<Transactions>
+    <Transaction>2025/02/10 14:23:17.000.909,=C:\Users\RD-00007\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2025/02/10 14:24:57.000.337,C:\Users\RD-00007\Documents\Embarcadero\Studio\Projects\Unit1.pas=C:\Users\RD-00007\Documents\Embarcadero\Studio\Projects\WeaponBehavior.pas</Transaction>
+    <Transaction>2025/02/10 14:30:55.000.360,=C:\Users\RD-00007\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2025/02/10 14:31:02.000.659,C:\Users\RD-00007\Documents\Embarcadero\Studio\Projects\Unit1.pas=C:\Users\RD-00007\Documents\Embarcadero\Studio\Projects\Characters.pas</Transaction>
+    <Transaction>2025/02/10 14:41:05.000.750,C:\Users\RD-00007\Documents\Embarcadero\Studio\Projects\Project4.dproj=C:\Users\RD-00007\Documents\Embarcadero\Studio\Projects\Design Patterns'\Chatper  1\KingAndQueen.dproj</Transaction>
+    <Transaction>2025/02/10 14:41:18.000.598,C:\Users\RD-00007\Documents\Embarcadero\Studio\Projects\Characters.pas=C:\Users\RD-00007\Documents\Embarcadero\Studio\Projects\Design Patterns'\Chatper  1\Characters.pas</Transaction>
+    <Transaction>2025/02/10 14:41:27.000.975,C:\Users\RD-00007\Documents\Embarcadero\Studio\Projects\WeaponBehavior.pas=C:\Users\RD-00007\Documents\Embarcadero\Studio\Projects\Design Patterns'\Chatper  1\WeaponBehavior.pas</Transaction>
   </Transactions>
 </BorlandProject>

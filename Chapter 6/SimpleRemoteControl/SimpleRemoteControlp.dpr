@@ -92,7 +92,7 @@ begin
     RemoteControl.SetCommand(4, CeilingFanMediumCommand, CeilingFanOffCommand);
     RemoteControl.SetCommand(5, CeilingFanLowCommand, CeilingFanOffCommand);
     RemoteControl.SetCommand(6, PartyOnMacro, PartyOffMacro);
-    
+
     Writeln(RemoteControl.ToString);
     
     RemoteControl.OnButtonWasPushed(0);
@@ -145,8 +145,11 @@ begin
     Writeln('---------- Pushing Macro Off ----------');
     RemoteControl.OffButtonWasPushed(6);
     Writeln('---------- End ----------' + sLineBreak);
+    Writeln('---------- Undo ---------' + sLineBreak);
+    Writeln(RemoteControl.ToString + sLineBreak);
+    RemoteControl.UndoButtonWasPushed;
     Readln;
-    
+
   except
     on E: Exception do
       Writeln(E.ClassName, ': ', E.Message);

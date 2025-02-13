@@ -9,7 +9,7 @@ type
 	TRubberDuck = class(TDuck)
   public
   	constructor Create;
-    procedure Display;
+    procedure Display; override;
   end;
 
 implementation

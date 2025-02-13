@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<BorlandProject>
+	<Transactions>
+    <Transaction>2025/02/10 14:58:08.000.025,=C:\Users\RD-00007\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2025/02/10 15:10:41.000.606,=C:\Users\RD-00007\Documents\Embarcadero\Studio\Projects\Unit2.pas</Transaction>
+    <Transaction>2025/02/10 15:12:43.000.065,C:\Users\RD-00007\Documents\Embarcadero\Studio\Projects\Unit2.pas=C:\Users\RD-00007\Documents\Embarcadero\Studio\Projects\Design Patterns'\Chapter2\WeatheroRama\Observeru.pas</Transaction>
+    <Transaction>2025/02/10 15:12:52.000.024,C:\Users\RD-00007\Documents\Embarcadero\Studio\Projects\Unit1.pas=C:\Users\RD-00007\Documents\Embarcadero\Studio\Projects\Design Patterns'\Chapter2\WeatheroRama\WeatherOrama.pas</Transaction>
+    <Transaction>2025/02/10 15:13:16.000.215,C:\Users\RD-00007\Documents\Embarcadero\Studio\Projects\Design Patterns'\Chapter2\WeatheroRama\WeatherOrama.pas=C:\Users\RD-00007\Documents\Embarcadero\Studio\Projects\Design Patterns'\Chapter2\WeatheroRama\Subject.pas</Transaction>
+    <Transaction>2025/02/10 15:13:24.000.814,C:\Users\RD-00007\Documents\Embarcadero\Studio\Projects\Project4.dproj=C:\Users\RD-00007\Documents\Embarcadero\Studio\Projects\Design Patterns'\Chapter2\WeatheroRama\WeatherOrama.dproj</Transaction>
+    <Transaction>2025/02/10 15:15:21.000.595,=C:\Users\RD-00007\Documents\Embarcadero\Studio\Projects\Design Patterns'\Chapter2\WeatheroRama\Unit1.pas</Transaction>
+    <Transaction>2025/02/10 15:15:53.000.736,C:\Users\RD-00007\Documents\Embarcadero\Studio\Projects\Design Patterns'\Chapter2\WeatheroRama\Unit1.pas=C:\Users\RD-00007\Documents\Embarcadero\Studio\Projects\Design Patterns'\Chapter2\WeatheroRama\Display.pas</Transaction>
+    <Transaction>2025/02/10 15:17:31.000.811,=C:\Users\RD-00007\Documents\Embarcadero\Studio\Projects\Design Patterns'\Chapter2\WeatheroRama\Unit1.pas</Transaction>
+    <Transaction>2025/02/10 15:33:09.000.650,C:\Users\RD-00007\Documents\Embarcadero\Studio\Projects\Design Patterns'\Chapter2\WeatheroRama\Unit1.pas=C:\Users\RD-00007\Documents\Embarcadero\Studio\Projects\Design Patterns'\Chapter2\WeatheroRama\WeatherData.pas</Transaction>
+  </Transactions>
+	<ProjectSortOrder AutoSort="0" SortType="0">
+    <File Path="Display.pas"/>
+    <File Path="Observeru.pas"/>
+    <File Path="Subject.pas"/>
+    <File Path="WeatherData.pas"/>
+  </ProjectSortOrder>
+</BorlandProject>

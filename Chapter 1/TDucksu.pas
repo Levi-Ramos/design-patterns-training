@@ -11,10 +11,11 @@ type
     Fly: IFlyBehavior;
   public
   	procedure Swim;
-    procedure DoQuack; 
+    procedure DoQuack;
     procedure DoFly;
     procedure SetQuack(AQuack: IQuackBehavior);
     procedure SetFly(AFly: IFlyBehavior);
+    procedure Display; virtual; abstract;
     constructor Create(AQuack: IQuackBehavior; AFly: IFlyBehavior);
   end;
 

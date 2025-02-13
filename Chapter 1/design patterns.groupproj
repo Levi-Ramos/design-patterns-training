@@ -1,0 +1,108 @@
+﻿<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+    <PropertyGroup>
+        <ProjectGuid>{3EBB73BA-8D13-47A5-BE5B-6486B11BA2D6}</ProjectGuid>
+    </PropertyGroup>
+    <ItemGroup>
+        <Projects Include="KingAndQueen.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="SimUDuck.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="..\Chapter 2\WeatheroRama\WeatherOrama.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="..\Chapter 3\StarBuzz.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="..\Chapter 4\PizzaStoreProj.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="..\Chapter 5\Chocolate Singleton\ChocolateFactorySingleton.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="..\Chapter 6\SimpleRemoteControl\SimpleRemoteControlp.dproj">
+            <Dependencies/>
+        </Projects>
+    </ItemGroup>
+    <ProjectExtensions>
+        <Borland.Personality>Default.Personality.12</Borland.Personality>
+        <Borland.ProjectType/>
+        <BorlandProject>
+            <Default.Personality/>
+        </BorlandProject>
+    </ProjectExtensions>
+    <Target Name="KingAndQueen">
+        <MSBuild Projects="KingAndQueen.dproj"/>
+    </Target>
+    <Target Name="KingAndQueen:Clean">
+        <MSBuild Projects="KingAndQueen.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="KingAndQueen:Make">
+        <MSBuild Projects="KingAndQueen.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="SimUDuck">
+        <MSBuild Projects="SimUDuck.dproj"/>
+    </Target>
+    <Target Name="SimUDuck:Clean">
+        <MSBuild Projects="SimUDuck.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="SimUDuck:Make">
+        <MSBuild Projects="SimUDuck.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="WeatherOrama">
+        <MSBuild Projects="..\Chapter 2\WeatheroRama\WeatherOrama.dproj"/>
+    </Target>
+    <Target Name="WeatherOrama:Clean">
+        <MSBuild Projects="..\Chapter 2\WeatheroRama\WeatherOrama.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="WeatherOrama:Make">
+        <MSBuild Projects="..\Chapter 2\WeatheroRama\WeatherOrama.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="StarBuzz">
+        <MSBuild Projects="..\Chapter 3\StarBuzz.dproj"/>
+    </Target>
+    <Target Name="StarBuzz:Clean">
+        <MSBuild Projects="..\Chapter 3\StarBuzz.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="StarBuzz:Make">
+        <MSBuild Projects="..\Chapter 3\StarBuzz.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="PizzaStoreProj">
+        <MSBuild Projects="..\Chapter 4\PizzaStoreProj.dproj"/>
+    </Target>
+    <Target Name="PizzaStoreProj:Clean">
+        <MSBuild Projects="..\Chapter 4\PizzaStoreProj.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="PizzaStoreProj:Make">
+        <MSBuild Projects="..\Chapter 4\PizzaStoreProj.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="ChocolateFactorySingleton">
+        <MSBuild Projects="..\Chapter 5\Chocolate Singleton\ChocolateFactorySingleton.dproj"/>
+    </Target>
+    <Target Name="ChocolateFactorySingleton:Clean">
+        <MSBuild Projects="..\Chapter 5\Chocolate Singleton\ChocolateFactorySingleton.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="ChocolateFactorySingleton:Make">
+        <MSBuild Projects="..\Chapter 5\Chocolate Singleton\ChocolateFactorySingleton.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="SimpleRemoteControlp">
+        <MSBuild Projects="..\Chapter 6\SimpleRemoteControl\SimpleRemoteControlp.dproj"/>
+    </Target>
+    <Target Name="SimpleRemoteControlp:Clean">
+        <MSBuild Projects="..\Chapter 6\SimpleRemoteControl\SimpleRemoteControlp.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="SimpleRemoteControlp:Make">
+        <MSBuild Projects="..\Chapter 6\SimpleRemoteControl\SimpleRemoteControlp.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="Build">
+        <CallTarget Targets="KingAndQueen;SimUDuck;WeatherOrama;StarBuzz;PizzaStoreProj;ChocolateFactorySingleton;SimpleRemoteControlp"/>
+    </Target>
+    <Target Name="Clean">
+        <CallTarget Targets="KingAndQueen:Clean;SimUDuck:Clean;WeatherOrama:Clean;StarBuzz:Clean;PizzaStoreProj:Clean;ChocolateFactorySingleton:Clean;SimpleRemoteControlp:Clean"/>
+    </Target>
+    <Target Name="Make">
+        <CallTarget Targets="KingAndQueen:Make;SimUDuck:Make;WeatherOrama:Make;StarBuzz:Make;PizzaStoreProj:Make;ChocolateFactorySingleton:Make;SimpleRemoteControlp:Make"/>
+    </Target>
+    <Import Project="$(BDS)\Bin\CodeGear.Group.Targets" Condition="Exists('$(BDS)\Bin\CodeGear.Group.Targets')"/>
+</Project>

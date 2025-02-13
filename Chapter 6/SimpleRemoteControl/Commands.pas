@@ -375,8 +375,11 @@ begin
 end;
 
 procedure TMacroCommand.Undo;
+var
+  I: Integer;
 begin
-	{ not implemented }
+  for I := 0 to High(FCommands) do
+    FCommands[I].Undo;
 end;
 
 { TTVOnCommand }

@@ -16,10 +16,7 @@ uses
   TDecoyDucku in 'TDecoyDucku.pas';
 
 var
-	MallarDuck: TMallardDuck;
-  RubberDuck: TRubberDuck;
-  DecoyDuck: TDuckDecoy;
-  ModelDuck: TModelDuck;
+	MallarDuck, RubberDuck, DecoyDuck, ModelDuck: TDuck;
 begin
   try
     { TODO -oUser -cConsole Main : Insert code here }
