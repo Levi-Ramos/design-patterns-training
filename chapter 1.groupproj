@@ -1,0 +1,48 @@
+﻿<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+    <PropertyGroup>
+        <ProjectGuid>{A1EEE25D-FA06-4ECA-8D0B-255F413402CA}</ProjectGuid>
+    </PropertyGroup>
+    <ItemGroup>
+        <Projects Include="Chatper  1\SimUDuck.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="Chatper  1\KingAndQueen.dproj">
+            <Dependencies/>
+        </Projects>
+    </ItemGroup>
+    <ProjectExtensions>
+        <Borland.Personality>Default.Personality.12</Borland.Personality>
+        <Borland.ProjectType/>
+        <BorlandProject>
+            <Default.Personality/>
+        </BorlandProject>
+    </ProjectExtensions>
+    <Target Name="SimUDuck">
+        <MSBuild Projects="Chatper  1\SimUDuck.dproj"/>
+    </Target>
+    <Target Name="SimUDuck:Clean">
+        <MSBuild Projects="Chatper  1\SimUDuck.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="SimUDuck:Make">
+        <MSBuild Projects="Chatper  1\SimUDuck.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="KingAndQueen">
+        <MSBuild Projects="Chatper  1\KingAndQueen.dproj"/>
+    </Target>
+    <Target Name="KingAndQueen:Clean">
+        <MSBuild Projects="Chatper  1\KingAndQueen.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="KingAndQueen:Make">
+        <MSBuild Projects="Chatper  1\KingAndQueen.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="Build">
+        <CallTarget Targets="SimUDuck;KingAndQueen"/>
+    </Target>
+    <Target Name="Clean">
+        <CallTarget Targets="SimUDuck:Clean;KingAndQueen:Clean"/>
+    </Target>
+    <Target Name="Make">
+        <CallTarget Targets="SimUDuck:Make;KingAndQueen:Make"/>
+    </Target>
+    <Import Project="$(BDS)\Bin\CodeGear.Group.Targets" Condition="Exists('$(BDS)\Bin\CodeGear.Group.Targets')"/>
+</Project>

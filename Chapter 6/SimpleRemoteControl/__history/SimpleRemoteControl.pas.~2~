@@ -1,0 +1,31 @@
+unit SimpleRemoteControl;
+
+interface
+
+uses
+	Commands;
+
+type
+	TSimpleRemoteControl = class
+  private
+  	FSlot: ICommand;
+  public
+  	procedure SetCommand(ACommand: ICommand);
+    procedure PressedButton;
+  end;
+
+implementation
+
+{ TSimpleRemoteControl }
+
+procedure TSimpleRemoteControl.PressedButton;
+begin
+	FSlot.Execute;
+end;
+    
+procedure TSimpleRemoteControl.SetCommand(ACommand: ICommand);
+begin
+	FSlot := ACommand;
+end;
+
+end.

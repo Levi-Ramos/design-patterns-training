@@ -1,0 +1,44 @@
+unit Objects;
+
+interface
+
+type
+	TLights = class
+  private
+  public
+  	procedure OnLights;
+    procedure OffLights;
+  end;
+
+  TGarage = class
+  	procedure OpenGarage;
+    procedure CloseGarage;
+  end;
+
+implementation
+
+{ TLights }
+
+procedure TLights.OffLights;
+begin
+	Writeln('Light is turned off');
+end;
+
+procedure TLights.OnLights;
+begin
+	Writeln('Light is turned on');
+end;
+
+{ TGarage }
+
+procedure TGarage.CloseGarage;
+begin
+	Writeln('Garage Close');
+end;
+
+procedure TGarage.OpenGarage;
+begin
+	Writeln('Garage Open');
+end;
+
+end.

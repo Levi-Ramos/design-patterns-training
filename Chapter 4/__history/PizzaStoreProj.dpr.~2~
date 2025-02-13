@@ -1,0 +1,33 @@
+program PizzaStoreProj;
+
+{$APPTYPE CONSOLE}
+
+{$R *.res}
+
+uses
+  System.SysUtils,
+  Pizza in 'Pizza.pas',
+  PizzaStore in 'PizzaStore.pas';
+
+var
+	LInput: String;
+  NyPizzaStore: TPizzaStore;
+  ChPizzaStore: TPizzaStore;
+begin
+  try
+    { TODO -oUser -cConsole Main : Insert code here }
+    NyPizzaStore := TNyStylePizzaStore.Create;
+    Writeln('New york pepperoni pizza order');
+    NyPizzaStore.OrderPizza('pepperoni');
+
+    Writeln;
+
+    ChPizzaStore := TChStylePizzaStore.Create;
+    Writeln('Chicago cheese pizza order');
+    ChPizzaStore.OrderPizza('cheese');
+    Readln(LInput);
+  except
+    on E: Exception do
+      Writeln(E.ClassName, ': ', E.Message);
+  end;
+end.

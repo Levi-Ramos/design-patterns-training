@@ -1,0 +1,26 @@
+unit TMallardDucku;
+
+interface
+
+uses TDucksu, IFlyBehavioru, IQuackBehavioru;
+
+type
+	TMallardDuck = class(TDuck)
+  public
+    constructor Create;
+  end;
+
+implementation
+
+{ TMallardDuck }
+
+uses TFlyBehavior, TQuackBehavioru;
+
+{ TMallardDuck }
+
+constructor TMallardDuck.Create;
+begin
+	inherited Create(TQuack.Create, TFlyWithWings.Create);
+end;
+
+end.

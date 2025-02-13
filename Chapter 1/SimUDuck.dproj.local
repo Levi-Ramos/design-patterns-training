@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<BorlandProject>
+  <Transactions>
+    <Transaction>2025/02/10 11:46:48.634,C:\Users\RD-00007\Documents\Embarcadero\Studio\Project4.dproj=C:\Users\RD-00007\Documents\Embarcadero\Studio\Projects\Project4.dproj</Transaction>
+    <Transaction>2025/02/10 11:58:06.427,=C:\Users\RD-00007\Documents\Embarcadero\Studio\Unit1.pas</Transaction>
+    <Transaction>2025/02/10 11:59:40.995,C:\Users\RD-00007\Documents\Embarcadero\Studio\Projects\Design Patterns'\Chatper  1\FlyBehavioru.pas=C:\Users\RD-00007\Documents\Embarcadero\Studio\Unit1.pas</Transaction>
+    <Transaction>2025/02/10 11:59:52.906,C:\Users\RD-00007\Documents\Embarcadero\Studio\Projects\Design Patterns'\Chatper  1\Project4.dproj=C:\Users\RD-00007\Documents\Embarcadero\Studio\Project4.dproj</Transaction>
+    <Transaction>2025/02/10 12:00:00.249,=C:\Users\RD-00007\Documents\Embarcadero\Studio\Projects\Design Patterns'\Chatper  1\Unit1.pas</Transaction>
+    <Transaction>2025/02/10 13:03:38.970,C:\Users\RD-00007\Documents\Embarcadero\Studio\Projects\Design Patterns'\Chatper  1\QuackBehavioru.pas=C:\Users\RD-00007\Documents\Embarcadero\Studio\Projects\Design Patterns'\Chatper  1\Unit1.pas</Transaction>
+    <Transaction>2025/02/10 13:03:56.498,C:\Users\RD-00007\Documents\Embarcadero\Studio\Projects\Design Patterns'\Chatper  1\IFlyBehavioru.pas=C:\Users\RD-00007\Documents\Embarcadero\Studio\Projects\Design Patterns'\Chatper  1\FlyBehavioru.pas</Transaction>
+    <Transaction>2025/02/10 13:03:59.864,C:\Users\RD-00007\Documents\Embarcadero\Studio\Projects\Design Patterns'\Chatper  1\IQuackBehavioru.pas=C:\Users\RD-00007\Documents\Embarcadero\Studio\Projects\Design Patterns'\Chatper  1\QuackBehavioru.pas</Transaction>
+    <Transaction>2025/02/10 13:04:04.962,=C:\Users\RD-00007\Documents\Embarcadero\Studio\Projects\Design Patterns'\Chatper  1\Unit1.pas</Transaction>
+    <Transaction>2025/02/10 13:08:44.821,=C:\Users\RD-00007\Documents\Embarcadero\Studio\Projects\Design Patterns'\Chatper  1\Unit2.pas</Transaction>
+    <Transaction>2025/02/10 13:12:26.083,C:\Users\RD-00007\Documents\Embarcadero\Studio\Projects\Design Patterns'\Chatper  1\TFlyWithWings.pas=C:\Users\RD-00007\Documents\Embarcadero\Studio\Projects\Design Patterns'\Chatper  1\Unit2.pas</Transaction>
+    <Transaction>2025/02/10 13:12:35.332,C:\Users\RD-00007\Documents\Embarcadero\Studio\Projects\Design Patterns'\Chatper  1\TFlyWithWingsu.pas=C:\Users\RD-00007\Documents\Embarcadero\Studio\Projects\Design Patterns'\Chatper  1\TFlyWithWings.pas</Transaction>
+    <Transaction>2025/02/10 13:13:26.444,C:\Users\RD-00007\Documents\Embarcadero\Studio\Projects\Design Patterns'\Chatper  1\TFlyBehavior.pas=C:\Users\RD-00007\Documents\Embarcadero\Studio\Projects\Design Patterns'\Chatper  1\TFlyWithWingsu.pas</Transaction>
+    <Transaction>2025/02/10 13:15:25.905,=C:\Users\RD-00007\Documents\Embarcadero\Studio\Projects\Design Patterns'\Chatper  1\Unit2.pas</Transaction>
+    <Transaction>2025/02/10 13:17:29.741,C:\Users\RD-00007\Documents\Embarcadero\Studio\Projects\Design Patterns'\Chatper  1\TQuackBehavior.pas=C:\Users\RD-00007\Documents\Embarcadero\Studio\Projects\Design Patterns'\Chatper  1\Unit2.pas</Transaction>
+    <Transaction>2025/02/10 13:17:33.780,C:\Users\RD-00007\Documents\Embarcadero\Studio\Projects\Design Patterns'\Chatper  1\TQuackBehavioru.pas=C:\Users\RD-00007\Documents\Embarcadero\Studio\Projects\Design Patterns'\Chatper  1\TQuackBehavior.pas</Transaction>
+    <Transaction>2025/02/10 13:25:31.758,C:\Users\RD-00007\Documents\Embarcadero\Studio\Projects\Design Patterns'\Chatper  1\TDucksu.pas=C:\Users\RD-00007\Documents\Embarcadero\Studio\Projects\Design Patterns'\Chatper  1\Unit1.pas</Transaction>
+    <Transaction>2025/02/10 13:25:42.283,=C:\Users\RD-00007\Documents\Embarcadero\Studio\Projects\Design Patterns'\Chatper  1\Unit1.pas</Transaction>
+    <Transaction>2025/02/10 13:36:33.164,C:\Users\RD-00007\Documents\Embarcadero\Studio\Projects\Design Patterns'\Chatper  1\TMallardDucku.pas=C:\Users\RD-00007\Documents\Embarcadero\Studio\Projects\Design Patterns'\Chatper  1\Unit1.pas</Transaction>
+    <Transaction>2025/02/10 13:37:33.802,=C:\Users\RD-00007\Documents\Embarcadero\Studio\Projects\Design Patterns'\Chatper  1\Unit1.pas</Transaction>
+    <Transaction>2025/02/10 13:39:02.581,C:\Users\RD-00007\Documents\Embarcadero\Studio\Projects\Design Patterns'\Chatper  1\TRubberDuck.pas=C:\Users\RD-00007\Documents\Embarcadero\Studio\Projects\Design Patterns'\Chatper  1\Unit1.pas</Transaction>
+    <Transaction>2025/02/10 13:39:53.603,C:\Users\RD-00007\Documents\Embarcadero\Studio\Projects\Design Patterns'\Chatper  1\TRubberDucku.pas=C:\Users\RD-00007\Documents\Embarcadero\Studio\Projects\Design Patterns'\Chatper  1\TRubberDuck.pas</Transaction>
+    <Transaction>2025/02/10 13:41:54.098,=C:\Users\RD-00007\Documents\Embarcadero\Studio\Projects\Design Patterns'\Chatper  1\Unit1.pas</Transaction>
+    <Transaction>2025/02/10 13:43:40.369,C:\Users\RD-00007\Documents\Embarcadero\Studio\Projects\Design Patterns'\Chatper  1\TDecoyDucku.pas=C:\Users\RD-00007\Documents\Embarcadero\Studio\Projects\Design Patterns'\Chatper  1\Unit1.pas</Transaction>
+    <Transaction>2025/02/10 14:21:59.154,C:\Users\RD-00007\Documents\Embarcadero\Studio\Projects\Design Patterns'\Chatper  1\SimUDuck.dproj=C:\Users\RD-00007\Documents\Embarcadero\Studio\Projects\Design Patterns'\Chatper  1\Project4.dproj</Transaction>
+  </Transactions>
+</BorlandProject>

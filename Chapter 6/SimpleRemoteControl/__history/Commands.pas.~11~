@@ -1,0 +1,245 @@
+unit Commands;
+
+interface
+
+uses Objects;
+
+type
+	ICommand = interface
+  ['{481BD072-EA54-43A4-816E-2F3C822EBBDF}']
+  	procedure Execute;
+    procedure Undo;
+  end;
+
+  TNoCommand = class(TInterfacedObject, ICommand)
+  	procedure Execute;
+    procedure Undo;
+  end;
+
+  TLightsOnCommand = class(TInterfacedObject, ICommand)
+  private
+  	FLights: TLights;
+  public
+  	procedure Execute;
+    procedure Undo;
+    constructor Create(ALights: TLights);
+  end;
+
+  TLightsOffCommand = class(TInterfacedObject, ICommand)
+  private
+  	FLights: TLights;
+  public
+  	procedure Execute;
+    procedure Undo;
+    constructor Create(ALights: TLights);
+  end;
+
+  TGarageDoorOpenCommand = class(TInterfacedObject, ICommand)
+  private
+  	FGarage: TGarage;
+  public
+    procedure Execute;
+    procedure Undo;
+    constructor Create(AGarage: TGarage);
+  end;
+
+  TGarageDoorCloseCommand = class(TInterfacedObject, ICommand)
+  private
+  	FGarage: TGarage;
+  public
+    procedure Execute;
+    procedure Undo;
+    constructor Create(AGarage: TGarage);
+  end;
+  
+  TCeilingFanOnCommand = class(TInterfacedObject, ICommand)
+  private
+  	FCeilingFan: TCeilingFan;
+  public
+    procedure Execute;
+    procedure Undo;
+    constructor Create(ACeilingFan: TCeilingFan);
+  end;
+
+  TCeilingFanOffCommand = class(TInterfacedObject, ICommand)
+  private
+  	FCeilingFan: TCeilingFan;
+  public
+    procedure Execute;
+    procedure Undo;
+    constructor Create(ACeilingFan: TCeilingFan);
+  end;
+
+  TStereoOnForCDCommand = class(TInterfacedObject, ICommand)
+  private
+  	FStereo: TStereo;
+  public
+    procedure Execute;
+    procedure Undo;
+    constructor Create(AStereo: TStereo);
+  end;
+
+  TStereoOffCommand = class(TInterfacedObject, ICommand)
+  private
+  	FStereo: TStereo;
+  public
+    procedure Execute;
+    procedure Undo;
+    constructor Create(AStereo: TStereo);
+  end;
+  
+implementation
+
+{ TLightsOnCommand }
+
+constructor TLightsOnCommand.Create(ALights: TLights);
+begin
+	FLights := ALights;
+end;
+
+procedure TLightsOnCommand.Execute;
+begin
+	FLights.OnLights;
+end;
+
+procedure TLightsOnCommand.Undo;
+begin
+ FLights.OffLights;	
+end;
+
+{ TGarageDoorOpenCommand }
+
+constructor TGarageDoorOpenCommand.Create(AGarage: TGarage);
+begin
+	FGarage := AGarage;
+end;
+
+procedure TGarageDoorOpenCommand.Execute;
+begin
+	FGarage.OpenGarage;
+end;
+
+procedure TGarageDoorOpenCommand.Undo;
+begin
+	FGarage.CloseGarage;
+end;
+
+{ TLightsOffCommand }
+
+constructor TLightsOffCommand.Create(ALights: TLights);
+begin
+	FLights := ALights;
+end;
+
+procedure TLightsOffCommand.Execute;
+begin
+	FLights.OffLights;
+end;
+
+procedure TLightsOffCommand.Undo;
+begin
+	FLights.OnLights;
+end;
+
+{ TGarageDoorCloseCommand }
+
+constructor TGarageDoorCloseCommand.Create(AGarage: TGarage);
+begin
+	FGarage := AGarage;
+end;
+
+procedure TGarageDoorCloseCommand.Execute;
+begin
+	FGarage.CloseGarage;
+end;
+
+procedure TGarageDoorCloseCommand.Undo;
+begin
+	FGarage.OpenGarage;
+end;
+
+{ TCeilingFanHigh }
+
+constructor TCeilingFanOnCommand.Create(ACeilingFan: TCeilingFan);
+begin
+	FCeilingFan := ACeilingFan;
+end;
+
+procedure TCeilingFanONCommand.Execute;
+begin
+	FCeilingFan.CeilingHigh;
+end;
+
+procedure TCeilingFanOnCommand.Undo;
+begin
+	FCeilingFan.CeilingOff;
+end;
+
+{ TCeilingFanOff }
+
+constructor TCeilingFanOffCommand.Create(ACeilingFan: TCeilingFan);
+begin
+	FCeilingFan := ACeilingFan;
+end;
+
+procedure TCeilingFanOffCommand.Execute;
+begin
+	FCeilingFan.CeilingOff;
+end;
+
+procedure TCeilingFanOffCommand.Undo;
+begin
+	FCeilingFan.CeilingHigh;
+end;
+
+{ TStereoOnForCD }
+
+constructor TStereoOnForCDCommand.Create(AStereo: TStereo);
+begin
+	FStereo := AStereo;
+end;
+
+procedure TStereoOnForCDCommand.Execute;
+begin
+	FStereo.StereoOnForCd;
+  FStereo.StereoSetCD;       
+  FStereo.StereoSetVolume(11);
+end;
+
+procedure TStereoOnForCDCommand.Undo;
+begin
+	FStereo.StereoOff;
+end;
+
+{ TNoCommand }
+
+procedure TNoCommand.Execute;
+begin
+	Writeln('no command');
+end;
+
+procedure TNoCommand.Undo;
+begin
+	
+end;
+
+{ TStereoOffCommand }
+
+constructor TStereoOffCommand.Create(AStereo: TStereo);
+begin
+	FStereo := AStereo;
+end;
+
+procedure TStereoOffCommand.Execute;
+begin
+	FStereo.StereoOff;
+end;
+
+procedure TStereoOffCommand.Undo;
+begin
+	FStereo.StereoOnForCd;
+  FSTereo.StereoSetCD;
+  FStereo.StereoSetVolume(11);
+end;
+
+end.

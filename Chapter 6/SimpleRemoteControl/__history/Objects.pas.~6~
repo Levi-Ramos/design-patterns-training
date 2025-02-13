@@ -1,0 +1,106 @@
+unit Objects;
+
+interface
+
+uses
+	System.SysUtils;
+type
+	TItems = class abstract
+  	constructor Create(ARoom: string);
+  protected
+  	FRoom: string;
+  end;
+  
+	TLights = class(TItems)
+  private
+  	FRoom: string;
+  public
+  	procedure OnLights;
+    procedure OffLights;
+  end;
+
+  TGarage = class(TItems)
+  	procedure OpenGarage;
+    procedure CloseGarage;
+  end;
+
+  TCeilingFan = class(TItems)
+		procedure CeilingHigh;
+    procedure CeilingOff;
+  end;
+
+  TStereo= class(TItems)
+  	procedure StereoOnForCd;
+    procedure StereoOff;
+    procedure StereoSetCD;
+    procedure StereoSetVolume(AVolume: Integer);
+  end;
+
+implementation
+
+{ TLights }
+
+procedure TLights.OffLights;
+begin
+	Writeln(FRoom + ' Light is turned off');
+end;
+
+procedure TLights.OnLights;
+begin
+	Writeln(FRoom + ' Light is turned on');
+end;
+
+{ TGarage }
+
+procedure TGarage.CloseGarage;
+begin
+	Writeln(FRoom + ' Garage Close');
+end;
+
+procedure TGarage.OpenGarage;
+begin
+	Writeln(FRoom + ' Garage Open');
+end;
+
+{ TCeilingFan }
+
+procedure TCeilingFan.CeilingHigh;
+begin
+  Writeln(FRoom + ' Ceiling fan at high');
+end;
+
+procedure TCeilingFan.CeilingOff;
+begin
+	Writeln(FRoom + ' Ceiling fan off');
+end;
+
+{ TStereo }
+
+procedure TStereo.StereoOff;
+begin
+	Writeln(FRoom + ' Stereo off');
+end;
+
+procedure TStereo.StereoOnForCd;
+begin
+	Writeln(FRoom + ' Stereo on for cd');
+end;
+
+procedure TStereo.StereoSetCD;
+begin
+	Writeln(FRoom + ' setting cd');
+end;
+
+procedure TStereo.StereoSetVolume(AVolume: Integer);
+begin
+	Writeln(FRoom + ' Stereo Set Volume to ' + AVolume.ToString);
+end;
+
+{ TItems }
+
+constructor TItems.Create(ARoom: string);
+begin
+	FRoom := ARoom;
+end;
+
+end.

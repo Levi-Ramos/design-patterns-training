@@ -1,0 +1,78 @@
+unit Objects;
+
+interface
+
+type
+	TLights = class
+  private
+  public
+  	procedure OnLights;
+    procedure OffLights;
+  end;
+
+  TGarage = class
+  	procedure OpenGarage;
+    procedure CloseGarage;
+  end;
+
+  TCeilingFan = class
+		procedure CeilingHigh;
+    procedure CeilingOff;
+  end;
+
+  TStereo= class
+  	procedure StereoOnForCd;
+    procedure StereoOff;
+  end;
+
+implementation
+
+{ TLights }
+
+procedure TLights.OffLights;
+begin
+	Writeln('Light is turned off');
+end;
+
+procedure TLights.OnLights;
+begin
+	Writeln('Light is turned on');
+end;
+
+{ TGarage }
+
+procedure TGarage.CloseGarage;
+begin
+	Writeln('Garage Close');
+end;
+
+procedure TGarage.OpenGarage;
+begin
+	Writeln('Garage Open');
+end;
+
+{ TCeilingFan }
+
+procedure TCeilingFan.CeilingHigh;
+begin
+  Writeln('Ceiling fan at high');
+end;
+
+procedure TCeilingFan.CeilingOff;
+begin
+	Writeln('Ceiling fan off');
+end;
+
+{ TStereo }
+
+procedure TStereo.StereoOff;
+begin
+	Writeln('Stereo off');
+end;
+
+procedure TStereo.StereoOnForCd;
+begin
+	Writeln('Stereo on for cd');
+end;
+
+end.

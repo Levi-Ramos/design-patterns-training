@@ -1,0 +1,67 @@
+unit Decorator;
+
+interface
+
+uses Beverages;
+
+type
+	TCondimentDecorator = class abstract(TBeverage) 
+  	function GetDescription: string; virtual; abstract;
+  end; 
+
+  TMocha = class(TCondimentDecorator)
+  	FBeverage: TBeverage;
+    function GetDescription: string; override;
+    function Cost: Double; override;
+    constructor Create(ABeverage: TBeverage);
+  end;
+
+  TWhip = class(TCondimentDecorator)
+  	FBeverage: TBeverage;
+    function GetDescription: string; override;
+    function Cost: Double; override;
+    constructor Create(ABeverage: TBeverage);
+  end;
+
+implementation
+
+uses
+  System.SysUtils;
+
+{ TMocha }
+
+function TMocha.Cost: Double;
+begin
+	Result := FBeverage.Cost + 0.20;
+end;
+
+constructor TMocha.Create(ABeverage: TBeverage);
+begin
+	FBeverage := ABeverage;
+end;
+
+function TMocha.GetDescription: string;
+begin
+	Result := FBeverage.GetDescription + ', Mocha';
+end;
+
+{ TCondimentDecorator }
+
+{ TWhip }
+
+function TWhip.Cost: Double;
+begin
+	Result := FBeverage.Cost + 0.20;
+end;
+
+constructor TWhip.Create(ABeverage: TBeverage);
+begin
+	FBeverage := ABeverage;
+end;
+
+function TWhip.GetDescription: string;
+begin
+	Result := FBeverage.GetDescription + ', Whip';
+end;
+
+end.

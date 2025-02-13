@@ -1,0 +1,38 @@
+unit TFlyBehavior;
+
+interface
+
+uses IFlyBehavioru;
+
+type
+	TFlyWithWings = class(TInterfacedObject, IFlyBehavior)
+  private
+  public
+  	function Fly: string;
+  end;
+
+type
+	TFlyNoWay = class(TInterfacedObject, IFlyBehavior)
+  private
+  public
+  	function Fly: string;
+  end;
+
+implementation
+
+
+{ TFlyWithWings }
+
+function TFlyWithWings.Fly: string;
+begin
+	Result := 'The Duck is flying';
+end;
+
+{ TFlyNoWay }
+
+function TFlyNoWay.Fly: string;
+begin
+ Result := 'can''t fly';	
+end;
+
+end.

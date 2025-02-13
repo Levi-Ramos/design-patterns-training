@@ -1,0 +1,25 @@
+unit TRubberDuck;
+
+interface
+
+uses
+	TDucksu; 
+
+type
+	TRubberDuck = class(TDuck)
+  public
+  	constructor Create;
+  end;
+
+implementation
+
+{ TRubberDuck }
+
+uses IFlyBehavioru, IQuackBehavioru, TFlyBehavior, TQuackBehavioru;
+
+constructor TRubberDuck.Create;
+begin
+	inherited Create(TSqueak.Create, TFlyNoWay.Create);
+end;
+
+end.

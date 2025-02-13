@@ -1,0 +1,13 @@
+unit Display;
+
+interface
+
+type
+	IDisplayElement = interface
+    ['{AE7337D1-4A5E-4771-841D-28D6E4DF207B}']
+    procedure Display;
+  end;
+
+implementation
+
+end.

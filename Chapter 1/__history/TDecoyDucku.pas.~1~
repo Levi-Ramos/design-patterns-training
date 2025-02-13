@@ -1,0 +1,25 @@
+unit TDecoyDucku;
+
+interface
+
+uses
+  TDucksu;
+
+type
+	TDuckDecoy = class(TDuck)
+  private
+  	constructor Create;
+  end;
+
+implementation
+
+{ TDuckDecoy }
+
+uses IQuackBehavioru, TQuackBehavioru, TFlyBehavior;
+
+constructor TDuckDecoy.Create;
+begin
+	inherited Create(TMuteQuack.Create, TFlyNoWay.Create);
+end;
+
+end.

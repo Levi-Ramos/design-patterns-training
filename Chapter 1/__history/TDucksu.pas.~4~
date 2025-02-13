@@ -1,0 +1,45 @@
+unit TDucksu;
+
+interface
+
+uses IFlyBehavioru, IQuackBehavioru;
+
+type
+	TDuck = class abstract
+  private
+  	Quack: IQuackBehavior;
+    Fly: IFlyBehavior;
+  public
+    function Swim: string;
+    procedure DoQuack; 
+    procedure DoFly;
+    constructor Create(AQuack: IQuackBehavior; AFly: IFlyBehavior);
+  end;
+
+implementation
+
+
+{ TDuck }
+
+constructor TDuck.Create(AQuack: IQuackBehavior; AFly: IFlyBehavior);
+begin
+	Quack := AQuack;
+  Fly := AFly;
+end;
+
+procedure TDuck.DoFly;
+begin
+	Writeln(Fly.Fly);
+end;
+
+procedure TDuck.DoQuack;
+begin
+	Writeln(Quack.quack);
+end;
+
+function TDuck.Swim: string;
+begin
+	Result := 'All ducks float, even decoys';
+end;
+
+end.

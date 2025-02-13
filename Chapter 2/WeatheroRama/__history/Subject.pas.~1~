@@ -1,0 +1,14 @@
+unit WeatherOrama;
+
+interface
+
+type
+	TSubject = interface
+    ['{96A77459-75AE-4D09-96D8-D93B86AC22D9}']
+    public
+     procedure RegisterObserver	
+  end;
+
+implementation
+
+end.

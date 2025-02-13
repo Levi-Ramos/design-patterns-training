@@ -1,0 +1,38 @@
+unit TQuackBehavioru;
+
+interface
+
+uses IQuackBehavioru;
+
+type
+	TQuack = class(TInterfacedObject, IQuackBehavior)
+  private
+  public
+  	function Quack: string;
+  end;
+
+type
+	TSqueak = class(TInterfacedObject, IQuackBehavior)
+  private
+  public
+   function Quack: string;	
+  end;
+
+implementation
+
+
+{ TSqueak }
+
+function TSqueak.Quack: string;
+begin
+	Result := 'Squeak';
+end;
+
+{ TQuack }
+
+function TQuack.Quack: string;
+begin
+	Result := 'Quack';
+end;
+
+end.

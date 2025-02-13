@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<BorlandProject>
+	<Transactions>
+    <Transaction>2025/02/11 10:52:08.000.547,=C:\Users\RD-00007\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2025/02/11 10:52:14.000.386,C:\Users\RD-00007\Documents\Embarcadero\Studio\Projects\Unit1.pas=C:\Users\RD-00007\Documents\Embarcadero\Studio\Projects\Pizza.pas</Transaction>
+    <Transaction>2025/02/11 11:35:37.000.975,=C:\Users\RD-00007\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2025/02/11 11:38:09.000.214,C:\Users\RD-00007\Documents\Embarcadero\Studio\Projects\Unit1.pas=C:\Users\RD-00007\Documents\Embarcadero\Studio\Projects\PizzaStore.pas</Transaction>
+    <Transaction>2025/02/11 11:57:02.000.109,C:\Users\RD-00007\Documents\Embarcadero\Studio\Projects\PizzaStore.pas=C:\Users\RD-00007\Documents\Embarcadero\Studio\Projects\Design Patterns'\Chapter 4\PizzaStore.pas</Transaction>
+    <Transaction>2025/02/11 11:57:04.000.629,C:\Users\RD-00007\Documents\Embarcadero\Studio\Projects\Pizza.pas=C:\Users\RD-00007\Documents\Embarcadero\Studio\Projects\Design Patterns'\Chapter 4\Pizza.pas</Transaction>
+    <Transaction>2025/02/11 11:57:11.000.503,C:\Users\RD-00007\Documents\Embarcadero\Studio\Projects\Project4.dproj=C:\Users\RD-00007\Documents\Embarcadero\Studio\Projects\Design Patterns'\Chapter 4\PizzaStoreProj.dproj</Transaction>
+    <Transaction>2025/02/11 15:15:06.000.056,=C:\Users\RD-00007\Documents\Embarcadero\Studio\Projects\Design Patterns'\Chapter 4\Unit1.pas</Transaction>
+    <Transaction>2025/02/11 15:16:13.000.485,=C:\Users\RD-00007\Documents\Embarcadero\Studio\Projects\Design Patterns'\Chapter 4\Unit2.pas</Transaction>
+    <Transaction>2025/02/11 15:24:08.000.086,C:\Users\RD-00007\Documents\Embarcadero\Studio\Projects\Design Patterns'\Chapter 4\Unit2.pas=C:\Users\RD-00007\Documents\Embarcadero\Studio\Projects\Design Patterns'\Chapter 4\Dough.pas</Transaction>
+    <Transaction>2025/02/11 15:25:18.000.899,C:\Users\RD-00007\Documents\Embarcadero\Studio\Projects\Design Patterns'\Chapter 4\Unit1.pas=C:\Users\RD-00007\Documents\Embarcadero\Studio\Projects\Design Patterns'\Chapter 4\PizzaIngredient.pas</Transaction>
+    <Transaction>2025/02/11 15:25:25.000.728,=C:\Users\RD-00007\Documents\Embarcadero\Studio\Projects\Design Patterns'\Chapter 4\Unit1.pas</Transaction>
+    <Transaction>2025/02/11 15:28:04.000.388,C:\Users\RD-00007\Documents\Embarcadero\Studio\Projects\Design Patterns'\Chapter 4\Unit1.pas=C:\Users\RD-00007\Documents\Embarcadero\Studio\Projects\Design Patterns'\Chapter 4\SeafoodTopping.pas</Transaction>
+    <Transaction>2025/02/11 15:28:09.000.671,=C:\Users\RD-00007\Documents\Embarcadero\Studio\Projects\Design Patterns'\Chapter 4\Unit1.pas</Transaction>
+    <Transaction>2025/02/11 15:31:46.000.491,C:\Users\RD-00007\Documents\Embarcadero\Studio\Projects\Design Patterns'\Chapter 4\Unit1.pas=C:\Users\RD-00007\Documents\Embarcadero\Studio\Projects\Design Patterns'\Chapter 4\Cheese.pas</Transaction>
+    <Transaction>2025/02/11 15:31:52.000.685,=C:\Users\RD-00007\Documents\Embarcadero\Studio\Projects\Design Patterns'\Chapter 4\Unit1.pas</Transaction>
+    <Transaction>2025/02/11 15:34:48.000.224,C:\Users\RD-00007\Documents\Embarcadero\Studio\Projects\Design Patterns'\Chapter 4\Unit1.pas=C:\Users\RD-00007\Documents\Embarcadero\Studio\Projects\Design Patterns'\Chapter 4\Sauce.pas</Transaction>
+    <Transaction>2025/02/11 15:34:53.000.900,=C:\Users\RD-00007\Documents\Embarcadero\Studio\Projects\Design Patterns'\Chapter 4\Unit1.pas</Transaction>
+    <Transaction>2025/02/11 15:36:33.000.802,C:\Users\RD-00007\Documents\Embarcadero\Studio\Projects\Design Patterns'\Chapter 4\Unit1.pas=C:\Users\RD-00007\Documents\Embarcadero\Studio\Projects\Design Patterns'\Chapter 4\Pepperoni.pas</Transaction>
+    <Transaction>2025/02/11 15:36:37.000.843,=C:\Users\RD-00007\Documents\Embarcadero\Studio\Projects\Design Patterns'\Chapter 4\Unit1.pas</Transaction>
+    <Transaction>2025/02/11 15:41:36.000.045,C:\Users\RD-00007\Documents\Embarcadero\Studio\Projects\Design Patterns'\Chapter 4\Unit1.pas=C:\Users\RD-00007\Documents\Embarcadero\Studio\Projects\Design Patterns'\Chapter 4\Veggies.pas</Transaction>
+  </Transactions>
+</BorlandProject>

@@ -1,0 +1,31 @@
+unit TDecoyDucku;
+
+interface
+
+uses
+  TDucksu;
+
+type
+	TDuckDecoy = class(TDuck)
+  public
+  	function Display: string;
+  	constructor Create;
+  end;
+
+implementation
+
+{ TDuckDecoy }
+
+uses IQuackBehavioru, TQuackBehavioru, TFlyBehavior;
+
+constructor TDuckDecoy.Create;
+begin
+	inherited Create(TMuteQuack.Create, TFlyNoWay.Create);
+end;
+
+function TDuckDecoy.Display: string;
+begin
+	Result := 'Im not real, im a decoy duck';
+end;
+
+end.

@@ -1,0 +1,142 @@
+unit Pizza;
+
+interface
+
+uses
+	System.Generics.Collections;
+
+type
+	TPizza = class abstract
+  ['{7055EDA5-BD9D-40AF-9F73-0DC198C6CF47}']
+  	procedure Prepare; virtual;
+    procedure Bake; virtual;
+    procedure Cut; virtual;
+    procedure Box; virtual;
+
+    function GetName: string;
+  protected
+  	FName: string;
+    FDough: string;
+    FSauce: string;
+    FToppings: TList<string>;
+  end;
+
+  TNyStyleCheese = class(TPizza)
+  	constructor Create;
+  end;
+
+  TNyStylePepperoni = class(TPizza)
+  	constructor Create;
+  end;
+
+  TChStyleCheese = class(TPizza)
+  	constructor Create;
+    procedure Cut; override;
+  end;
+
+  TChStylePepperoni = class(TPizza)
+  	constructor Create;
+    procedure Cut; override;
+  end;
+
+implementation
+
+{ TPizza }
+
+{ TPizza }
+
+procedure TPizza.Bake;
+begin
+	Writeln('Bake for 25 minutes at 350');
+end;
+
+procedure TPizza.Box;
+begin
+	Writeln('Place pizza in official pizzastore box');
+end;
+
+procedure TPizza.Cut;
+begin
+	Writeln('Cutting hte pizza into diagonal slices');
+end;
+
+function TPizza.GetName: string;
+begin
+	Result := FName;
+end;
+
+procedure TPizza.Prepare;
+var
+	Topping: string;
+begin
+	Writeln('Preparing ' + FName);
+  Writeln('Tossing dough...');
+  Writeln('Adding Sauc...');
+  Writeln('Adding toppings...');
+  for Topping in FToppings do
+  begin
+  	Writeln('      ' + Topping);
+  end;
+end;
+
+{ TNyStyleCheese }
+
+constructor TNyStyleCheese.Create;
+begin
+	FName := 'NY Style Sauce and Cheese Pizza';
+  FDough := 'Thin Crust Dough';
+  FSauce := 'Marinara Sauce';
+
+  FToppings := TList<string>.Create;
+  FToppings.Add('Shredded mozarella cheese');
+end;
+
+{ TNyStylePepperoni }
+
+constructor TNyStylePepperoni.Create;
+begin
+	FName := 'NY Style Pepperoni Pizza';
+  FDough := 'Thin crust dough';
+  FSauce := 'Marinara Sauce';
+
+  FToppings := TList<string>.Create;
+	FToppings.Add('Pepperonis');
+end;
+
+{ TChStyleCheese }
+
+constructor TChStyleCheese.Create;
+begin
+	FName := 'Chicago Style Deep Dish Cheese Pizza';
+  FDough := 'Extra Thick Crust Dough';
+  FSauce := 'Plum Tomato Sauce';
+
+  FToppings := TList<string>.Create;
+  FToppings.Add('Shredded Mozarella Cheese');
+end;
+
+procedure TChStyleCheese.Cut;
+begin
+  inherited;
+  Writeln('Cutting the pizza into square slices');
+end;
+
+{ TChStylePepperoni }
+
+constructor TChStylePepperoni.Create;
+begin
+	FName := 'Chicago Style Pepperoni Pizza';
+  FDough := 'Extra Thick Crust Dough';
+  FSauce := 'Plum Tomato Sauce';
+
+  FToppings := TList<string>.Create;
+  FToppings.Add('Pepperonis');
+end;
+
+procedure TChStylePepperoni.Cut;
+begin
+  inherited;
+  	Writeln('Cutting the pizza into circles because we''re silly');
+end;
+
+end.

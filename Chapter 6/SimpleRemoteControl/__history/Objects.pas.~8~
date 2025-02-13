@@ -1,0 +1,171 @@
+unit Objects;
+
+interface
+
+uses
+	System.SysUtils;
+type
+	TLights = class
+  private
+  	FRoom: string;
+  public
+  	procedure OnLights;
+    procedure OffLights;
+    constructor Create(ARoom: string);
+  end;
+
+  TGarage = class
+  	procedure OpenGarage;
+    procedure CloseGarage;
+    procedure Stop;
+    procedure LightOn;
+    procedure LightOff;
+    constructor Create(ARoom: string);
+  private
+  	FRoom: string;
+  end;
+
+  TCeilingFan = class
+		procedure CeilingHigh;
+    procedure CeilingMedium;
+    procedure CeilingLow;
+    function CeilingGetSpeed: Integer;
+    procedure CeilingOff;
+    constructor Create(ARoom: string);
+  private
+  	class var HIGH: Integer;
+    class var MEDIUM: Integer;
+    class var LOW: Integer;
+    class var OFF: Integer;
+    FSpeed: Integer;
+    FRoom: string;
+  end;
+
+  TStereo= class
+  	procedure StereoOnForCd;
+    procedure StereoOff;
+    procedure StereoSetCD;
+    procedure StereoSetVolume(AVolume: Integer);
+    constructor Create(ARoom: string);
+  private
+  	FRoom: string;
+  end;
+
+implementation
+
+{ TLights }
+
+constructor TLights.Create(ARoom: string);
+begin
+ FRoom := ARoom;	
+end;
+
+procedure TLights.OffLights;
+begin
+	Writeln(FRoom + ' Light is turned off');
+end;
+
+procedure TLights.OnLights;
+begin
+	Writeln(FRoom + ' Light is turned on');
+end;
+
+{ TGarage }
+
+procedure TGarage.CloseGarage;
+begin
+	Writeln(FRoom + ' Garage Close');
+end;
+
+constructor TGarage.Create(ARoom: string);
+begin
+	FRoom := ARoom;
+end;
+
+procedure TGarage.LightOff;
+begin
+	Writeln(FRoom + ' Garage lights off');
+end;
+
+procedure TGarage.LightOn;
+begin
+	Writeln(FRoom + ' Garage lights on');
+end;
+
+procedure TGarage.OpenGarage;
+begin
+	Writeln(FRoom + ' Garage Open');
+end;
+
+procedure TGarage.Stop;
+begin
+	Writeln(FRoom + ' Garage stopped');
+end;
+
+{ TCeilingFan }
+
+function TCeilingFan.CeilingGetSpeed: Integer;
+begin
+	Result := FSpeed.ToString;
+end;
+
+procedure TCeilingFan.CeilingHigh;
+begin
+	FSpeed := HIGH;
+  Writeln(FRoom + ' Ceiling fan at high');
+end;
+
+procedure TCeilingFan.CeilingLow;
+begin
+	FSpeed := LOW;
+end;
+
+procedure TCeilingFan.CeilingMedium;
+begin
+	FSpeed := MEDIUM;
+end;
+
+procedure TCeilingFan.CeilingOff;
+begin
+	Writeln(FRoom + ' Ceiling fan off');
+end;
+
+constructor TCeilingFan.Create(ARoom: string);
+begin
+	FRoom := ARoom;
+  HIGH := 3;
+  MEDIUM := 2;
+  LOW := 1;
+  OFF := 0;
+end;
+
+{ TStereo }
+
+constructor TStereo.Create(ARoom: string);
+begin
+	FRoom := ARoom;
+end;
+
+procedure TStereo.StereoOff;
+begin
+	Writeln(FRoom + ' Stereo off');
+end;
+
+procedure TStereo.StereoOnForCd;
+begin
+	Writeln(FRoom + ' Stereo on for cd');
+end;
+
+procedure TStereo.StereoSetCD;
+begin
+	Writeln(FRoom + ' setting cd');
+end;
+
+procedure TStereo.StereoSetVolume(AVolume: Integer);
+begin
+	Writeln(FRoom + ' Stereo Set Volume to ' + AVolume.ToString);
+end;
+
+{ TItems }
+
+end.

@@ -1,0 +1,24 @@
+unit TFlyWithWingsu;
+
+interface
+
+uses IFlyBehavioru;
+
+type
+	TFlyWithWings = class(TInterfacedObject, IFlyBehavior)
+  private
+  public
+  	function Fly: string;
+  end;
+
+implementation
+
+
+{ TFlyWithWings }
+
+function TFlyWithWings.Fly: string;
+begin
+	Result := 'The fuck is flying';
+end;
+
+end.

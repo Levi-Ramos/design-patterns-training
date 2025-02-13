@@ -1,0 +1,69 @@
+unit PizzaStore;
+
+interface
+
+uses Pizza;
+
+type
+	TPizzaStore = class abstract
+  protected
+  	function CreatePizza(AType: string): TPizza; virtual; abstract;
+  public
+    function OrderPizza(AType: string): TPizza;
+  end;
+
+  TNyStylePizzaStore = class(TPizzaStore)                             
+  protected
+  	function CreatePizza(AType: string): TPizza; override;
+  end;
+
+  TChStylePizzaStore = class(TPizzaStore)
+  protected
+  	function CreatePizza(AType: string): TPizza; override;
+  end;
+
+implementation
+
+
+{ TPizzaStore }
+
+function TPizzaStore.OrderPizza(AType: string): TPizza;
+var
+	LPizza: TPizza;
+begin
+	LPizza := CreatePizza(AType);
+  LPizza.Prepare;
+  LPizza.Bake;
+  LPizza.Cut;
+  LPizza.Box;
+  Result := LPizza;
+end;
+
+{ TNyStylePizzaStore }
+
+function TNyStylePizzaStore.CreatePizza(AType: string) : TPizza;
+var
+	LPizza: TPizza;
+begin
+	if AType = 'cheese' then
+  	LPizza := TNyStyleCheese.Create
+  else
+  	LPizza := TNyStylePepperoni.Create;
+
+  Result := LPizza;
+end;
+
+{ TChStylePizzaStore }
+
+function TChStylePizzaStore.CreatePizza(AType: string): TPizza;
+var
+	LPizza: TPizza;
+begin
+	if AType = 'cheese' then
+  	LPizza := TChStyleCheese.Create
+  else
+  	LPizza := TChStylePepperoni.Create;
+
+  Result := LPizza;
+end;
+end.
