@@ -7,7 +7,8 @@ uses
 
 type
 	TPizza = class abstract
-  	procedure Prepare; virtual; abstract;
+//  	procedure Prepare; virtual; abstract;
+    procedure Prepare;
     procedure Bake; virtual;
     procedure Cut; virtual;
     procedure Box; virtual;
@@ -15,38 +16,63 @@ type
 
     procedure SetName(AName: string);
 
-  	constructor Create(APizzaIngredientFactory: TPizzaIngredientFactory);
+    constructor Create; virtual; abstract;
+//  	constructor Create(APizzaIngredientFactory: TPizzaIngredientFactory);
   protected
   	FPizzaIngredientFactory: TPizzaIngredientFactory;
   	FName: string;
-    FDough: TDough;
-    FSauce: TSauce;
-    FCheese: TCheese;
-    FPepperoni: TPepperoni;
-    FSeafoodTopping: TSeafoodTopping;
-    FVeggies: TList<TVeggies>;
+    FDough: string;
+    FCheese: string;
+    FSauce: string;
+//    FDough: TDough;
+//    FSauce: TSauce;
+//    FCheese: TCheese;
+//    FPepperoni: TPepperoni;
+//    FSeafoodTopping: TSeafoodTopping;
+//    FVeggies: TList<TVeggies>;
     FToppings: TList<string>;
   end;
 
-  TCheesePizza = class(TPizza)
+//  TCheesePizza = class(TPizza)
+//  public
+//    procedure Prepare; override;
+//  end;
+//
+//  TClamPizza = class(TPizza)
+//  public
+//    procedure Prepare; override;
+//  end;
+//
+//  TPepperoniPizza = class(TPizza)
+//  public
+//    procedure Prepare; override;
+//  end;
+//
+//  TVeggiePizza = class(TPizza)
+//  public
+//    procedure Prepare; override;
+//  end;
+
+  TNyStyleCheesePizza = class(TPizza)
   public
-    procedure Prepare; override;
+    constructor Create; override;
   end;
 
-  TClamPizza = class(TPizza)
+  TNyStylePepperoniPizza = class(TPizza)
   public
-    procedure Prepare; override;
+    constructor Create; override;
   end;
 
-  TPepperoniPizza = class(TPizza)
+  TChStyleCheesePizza = class(TPizza)
   public
-    procedure Prepare; override;
+    constructor Create; override;
   end;
-  
-  TVeggiePizza = class(TPizza)
+
+  TChStylePepperoniPizza = class(TPizza)
   public
-    procedure Prepare; override;
+    constructor Create; override;
   end;
+
 implementation
 
 { TPizza }
@@ -61,11 +87,6 @@ begin
 	Writeln('Place pizza in official pizzastore box');
 end;
 
-constructor TPizza.Create(APizzaIngredientFactory: TPizzaIngredientFactory);
-begin
-	FPizzaIngredientFactory := APizzaIngredientFactory;
-end;
-
 procedure TPizza.Cut;
 begin
 	Writeln('Cutting hte pizza into diagonal slices');
@@ -76,6 +97,21 @@ begin
 	Result := FName;
 end;
 
+procedure TPizza.Prepare;
+var
+  Topping: string;
+begin
+  Writeln('Preparing ' + FName);
+  Writeln('Tossing dough...');
+  Writeln('Adding sauce...');
+  Writeln('Adding toppings: ');
+  for Topping in FToppings do
+  begin
+    Writeln('     ' + Topping);
+  end;
+
+end;
+
 procedure TPizza.SetName(AName: string);
 begin
 	FName := AName;
@@ -83,55 +119,104 @@ end;
 
 { TCheesePizza }
 
-procedure TCheesePizza.Prepare;
+//procedure TCheesePizza.Prepare;
+//begin
+//  inherited;
+//  Writeln('Preparing ' + FName);
+//  Writeln('Ingredients:');
+//  FDough := FPizzaIngredientFactory.CreateDough;
+//  FSauce := FPizzaIngredientFactory.CreateSauce;
+//  FCheese := FPizzaIngredientFactory.CreateCheese;
+//end;
+//
+//{ TClamPizza }
+//
+//
+//
+//procedure TClamPizza.Prepare;
+//begin
+//  inherited;
+//  Writeln('Preparing ' + FName);
+//  Writeln('Ingredients:');
+//  FDough := FPizzaIngredientFactory.CreateDough;
+//  FSauce := FPizzaIngredientFactory.CreateSauce;
+//  FCheese := FPizzaIngredientFactory.CreateCheese;
+//  FSeafoodTopping := FPizzaIngredientFactory.CreateSeafoodTopping;
+//end;
+//
+//{ TPepperoniPizza }
+//
+//
+//procedure TPepperoniPizza.Prepare;
+//begin
+//  inherited;
+//  Writeln('Preparing ' + FName);
+//  FDough := FPizzaIngredientFactory.CreateDough;
+//  FSauce := FPizzaIngredientFactory.CreateSauce;
+//  FCheese := FPizzaIngredientFactory.CreateCheese;
+//  FPepperoni := FPizzaIngredientFactory.CreatePepperoni;
+//end;
+//
+//{ TVeggiePizza }
+//
+//
+//procedure TVeggiePizza.Prepare;
+//begin
+//  inherited;
+//  Writeln('Preparing ' + FName);
+//  FDough := FPizzaIngredientFactory.CreateDough;
+//  FSauce := FPizzaIngredientFactory.CreateSauce;
+//  FCheese := FPizzaIngredientFactory.CreateCheese;
+//  FVeggies := FPizzaIngredientFactory.CreateVeggies;
+//end;
+
+{ TNyStyleCheesePizza }
+
+constructor TNyStyleCheesePizza.Create;
 begin
-  inherited;
-  Writeln('Preparing ' + FName);
-  Writeln('Ingredients:');
-  FDough := FPizzaIngredientFactory.CreateDough;
-  FSauce := FPizzaIngredientFactory.CreateSauce;
-  FCheese := FPizzaIngredientFactory.CreateCheese;
+  FName := 'New York Style Sauce and Cheese Pizza';
+  FDough := 'Thin Crust Dough';
+  FSauce := 'Marinara Sauce';
+
+  FToppings := TList<string>.Create;
+  FToppings.Add('Grated Regiano Cheese');
 end;
 
-{ TClamPizza }
+{ TChStylePepperoniPizza }
 
-
-
-procedure TClamPizza.Prepare;
+constructor TChStylePepperoniPizza.Create;
 begin
-  inherited;
-  Writeln('Preparing ' + FName);
-  Writeln('Ingredients:');
-  FDough := FPizzaIngredientFactory.CreateDough;
-  FSauce := FPizzaIngredientFactory.CreateSauce;
-  FCheese := FPizzaIngredientFactory.CreateCheese;
-  FSeafoodTopping := FPizzaIngredientFactory.CreateSeafoodTopping;
+  FName := 'Chicago Style Pepperoni Pizza';
+  FDough := 'Extra Thick Crust Dough';
+  FSauce := 'Plum Tomato Sauce';
+
+  FToppings := TList<string>.Create;
+  FToppings.Add('Shredded Mozarella Cheese');
 end;
 
-{ TPepperoniPizza }
+{ TChStyleCheesePizza }
 
-
-procedure TPepperoniPizza.Prepare;
+constructor TChStyleCheesePizza.Create;
 begin
-  inherited;
-  Writeln('Preparing ' + FName);
-  FDough := FPizzaIngredientFactory.CreateDough;
-  FSauce := FPizzaIngredientFactory.CreateSauce;
-  FCheese := FPizzaIngredientFactory.CreateCheese;
-  FPepperoni := FPizzaIngredientFactory.CreatePepperoni;
+  FName := 'Chicago Style Cheese Pizza';
+  FDough := 'Extra Thick Crust Dough';
+  FSauce := 'Plum Tomato Sauce';
+
+  FToppings := TList<string>.Create;
+  FToppings.Add('Shredded Mozarella Cheese');
 end;
 
-{ TVeggiePizza }
+{ TNyStylePepperoniPizza }
 
-
-procedure TVeggiePizza.Prepare;
+constructor TNyStylePepperoniPizza.Create;
 begin
-  inherited;
-  Writeln('Preparing ' + FName);
-  FDough := FPizzaIngredientFactory.CreateDough;
-  FSauce := FPizzaIngredientFactory.CreateSauce;
-  FCheese := FPizzaIngredientFactory.CreateCheese;
-  FVeggies := FPizzaIngredientFactory.CreateVeggies;
+  FName := 'New York Style Pepperoni Pizza';
+  FDough := 'Thin Crust Dough';
+  FSauce := 'Marinara Sauce';
+
+  FToppings := TList<string>.Create;
+  FToppings.Add('Grated Regiano Cheese');
+  FToppings.Add('Pepperoni');
 end;
 
 end.

@@ -47,25 +47,27 @@ end;
 function TNyStylePizzaStore.CreatePizza(APizzaType: TPizzaType) : TPizza;
 var
 	LPizza: TPizza;
-  LIngredientFactory: TPizzaIngredientFactory;
+//  LIngredientFactory: TPizzaIngredientFactory;
 begin
-	LIngredientFactory := TNyPizzaIngredientFactory.Create;
+//	LIngredientFactory := TNyPizzaIngredientFactory.Create;
   case APizzaType of
-    CHEESE: 
+    CHEESE:
     begin
-      LPizza := TCheesePizza.Create(LIngredientFactory);
-      LPizza.SetName('New york style cheese pizza');
+//      LPizza := TCheesePizza.Create(LIngredientFactory);
+//      LPizza.SetName('New york style cheese pizza');
+        LPizza := TNyStyleCheesePizza.Create;
     end;
-    PEPPERONI: 
+    PEPPERONI:
     begin
-       LPizza := TPepperoniPizza.Create(LIngredientFactory);
-       LPizza.SetName('New york style pepperoni pizza');
+//       LPizza := TPepperoniPizza.Create(LIngredientFactory);
+//       LPizza.SetName('New york style pepperoni pizza');
+        LPizza := TNyStylePepperoniPizza.Create;
     end;
-    CLAM:
-    begin
-      LPizza := TClamPizza.Create(LIngredientFactory);
-      LPizza.SetName('New york clam pizza');
-    end;
+//    CLAM:
+//    begin
+////      LPizza := TClamPizza.Create(LIngredientFactory);
+////      LPizza.SetName('New york clam pizza');
+//    end;
   end;
   Result := LPizza;
 end;
@@ -81,19 +83,21 @@ begin
   case APizzaType of
     CHEESE: 
     begin
-      LPizza := TCheesePizza.Create(LIngredientFactory);
-      LPizza.SetName('Chicago Style cheese pizza');
+//      LPizza := TCheesePizza.Create(LIngredientFactory);
+//      LPizza.SetName('Chicago Style cheese pizza');
+      LPizza := TChStyleCheesePizza.Create;
     end;
-    PEPPERONI: 
+    PEPPERONI:
     begin
-      LPizza := TPepperoniPizza.Create(LIngredientFactory);
-      LPizza.SetName('chicago style pepperoni pizza');
+//      LPizza := TPepperoniPizza.Create(LIngredientFactory);
+//      LPizza.SetName('chicago style pepperoni pizza');
+      LPizza := TChStylePepperoniPizza.Create;
     end;
-    CLAM:
-    begin
-      LPizza := TClamPizza.Create(LIngredientFactory);
-      LPizza.SetName('Chicago style clam pizza');
-    end;
+//    CLAM:
+//    begin
+//      LPizza := TClamPizza.Create(LIngredientFactory);
+//      LPizza.SetName('Chicago style clam pizza');
+//    end;
   end;
   Result := LPizza;
 end;
